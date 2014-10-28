@@ -1,0 +1,33 @@
+<%= form_for(@menu) do |f| %>
+  <% if @menu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+
+      <ul>
+      <% @menu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <%= f.fields_for :items do |builder| %>
+    <fieldset>
+      <%= builder.label :name, "Item" %><br />
+      <%= builder.text_area :name %><br />
+      <%= builder.hidden_field :_destroy %>
+      <%= link_to "remove", '#', class: "remove_fields" %>
+    </fieldset>
+  <% end %>
+
+  <a href="/items/new?menu_id=<%= @menu.id %>">Add</a>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
