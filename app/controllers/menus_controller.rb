@@ -40,6 +40,14 @@ class MenusController < ApplicationController
   # PATCH/PUT /menus/1
   # PATCH/PUT /menus/1.json
   def update
+    items = params[:menu][:items_attributes]
+    items.each_value do |value|
+      i = Item.find value[:id]
+      i.name = value[:name]
+      i.price = value[:price]
+      i.save
+    end
+
     respond_to do |format|
       if @menu.update(menu_params)
         format.html { redirect_to @menu, notice: 'Menu was successfully updated.' }

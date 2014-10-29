@@ -5,5 +5,16 @@
   <%= @menu.name %>
 </p>
 
+<%= form_for(@menu) do |f| %>
+  <%= f.fields_for :items do |builder| %>
+    <fieldset>
+      <%= builder.label :name, "Item" %>
+      <%= builder.text_field :name %>
+      <%= builder.label :name, "Price" %>
+      <%= builder.text_field :price %><br />
+    </fieldset>
+  <% end %>
+<% end %>
+
 <%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
+<a href="/menus">Back to settings</a><br>
