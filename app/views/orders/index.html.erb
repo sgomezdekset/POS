@@ -17,6 +17,12 @@
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <% @menus.each do |menu| %>
+      <tr>
+        <td><%= menu.name %></td>
+        <td><%= link_to 'Show', menu %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 
