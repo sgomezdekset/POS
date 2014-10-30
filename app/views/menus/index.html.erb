@@ -12,9 +12,11 @@
     <% @menus.each do |menu| %>
       <tr>
         <td><%= menu.name %></td>
+        <div class="prints">
         <td><%= link_to 'Show', menu %></td>
         <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
         <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </div>
       </tr>
     <% end %>
   </tbody>
@@ -22,6 +24,7 @@
 
 <br>
 
-<%= link_to 'Add a menu', new_menu_path %>
+<div class="links"><%= link_to 'Add a menu', new_menu_path %> |
 <a href="http://localhost:3000/">Home page</a><br>
+</div>
 

@@ -16,7 +16,7 @@
     <%= f.text_field :name %>
   </div>
 
-  <a href="/items/new?menu_id=<%= @menu.id %>">Add an item</a><br>
+  <a href="/items/new?menu_id=<%= @menu.id %>" class="links">+ Add an item</a><br>
   
   <%= f.fields_for :items do |builder| %>
     <fieldset>

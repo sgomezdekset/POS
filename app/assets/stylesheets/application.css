@@ -5,12 +5,7 @@
  */
 
 body {
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url('bg.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background: url('wbar.png') no-repeat center center fixed;
 }
 
 .navbar-nav {
@@ -25,8 +20,46 @@ body {
         line-height: normal;
     }
 
+.order-button {
+   margin:0 auto;
+   padding-left: 100px;
+}
 
+h1 {
+  padding-left: 100px;
+}
 
+th{
+  padding-left: 15px !important;
+}
+
+td {
+  padding-left: 50px !important;
+}
+
+.prints {
+  padding-left: 5px;
+}
+
+fieldset {
+  padding-left: 50px !important;
+}
+
+.field {
+  padding-left: 50px !important;
+}
+
+p {
+  padding-left: 15px;
+}
+
+.links {
+  padding-left: 50px;
+}
+
+.actions {
+  padding-left: 50px;
+}
 
 
 /*
