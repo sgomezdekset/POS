@@ -3,9 +3,26 @@
 <head>
   <title>POS</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    '//getbootstrap.com/dist/css/bootstrap.min.css' %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="http://localhost:3000/">Home</a></li>
+              <li><a href="/orders">Order</a></li>
+              <li><a href="/menus">Settings</a></li>
+                </ul>
+              </li>
+            </ul>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
 <body>
 
 <%= yield %>
