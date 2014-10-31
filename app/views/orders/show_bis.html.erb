@@ -1,0 +1,18 @@
+show_bis.html.erb
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @menu.name %>
+</p>
+
+<%= form_for(@menu) do |f| %>
+  <%= f.fields_for :items do |builder| %>
+    <fieldset>
+      <%= builder.label :name, "Item" %>
+      <%= builder.text_field :name %>
+      <%= builder.label :name, "Price" %>
+      <%= builder.text_field :price %><br />
+    </fieldset>
+  <% end %>
+<% end %>

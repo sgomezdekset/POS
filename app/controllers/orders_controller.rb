@@ -5,7 +5,6 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
-    @menus = Menu.all
   end
 
 
@@ -17,10 +16,14 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @menus = Menu.all
+    @items = Item.all
   end
 
   # GET /orders/1/edit
   def edit
+    @menus = Menu.all
+    @items = Item.all
   end
 
   # POST /orders
