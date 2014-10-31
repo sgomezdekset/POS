@@ -1,5 +1,8 @@
 <h1>New order</h1>
 
-<%= render 'form' %>
+<div class="row">
+   <div class="col-md-7 col-md-offset-1 col-xs-6"><%= render 'form' %></div>
+   <div class="col-md-4                 col-xs-6"><%= render 'total' %></div>
+</div>
 
-<%= link_to 'Back', orders_path %>
+

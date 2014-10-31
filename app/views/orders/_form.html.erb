@@ -15,7 +15,6 @@
     <h3> <%= menu.name %> </h3>
 
     <% menu.items.each do |item| %>
-
       <div class="menuItem"><%= item.name %> (<%= number_to_currency item.price %>)</div>
     <% end %>
 
