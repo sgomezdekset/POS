@@ -11,31 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :number %><br>
-    <%= f.number_field :number %>
-  </div>
+  <% @menus.each do |menu| %>
+    <h3> <%= menu.name %> </h3>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Menus list:</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+    <% menu.items.each do |item| %>
 
-    <tbody>
-      <% @menus.each do |menu| %>
-      <% @items.each do |item| %>
-        <tr>
-          <td><%= menu.name %></td>
-          <td><%= item.name %></td>
-          <td><%= item.price %></td>
-        </tr>
-      <% end %>  
-      <% end %>
-    </tbody>
-  </table>
+      <div class="menuItem"><%= item.name %> (<%= number_to_currency item.price %>)</div>
+    <% end %>
+
+  <% end %>
+
 
   <div class="actions">
     <%= f.submit %>

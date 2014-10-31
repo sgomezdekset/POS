@@ -3,6 +3,11 @@ h1 {
 }
 
 
-// Place all the styles related to the orders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.menuItem {
+  border: 1px solid #ccc;
+  width: 20%;
+  padding: 7px;
+  background-color: #EEE;
+  font-size: 20px;
+  margin: 10px;
+}
